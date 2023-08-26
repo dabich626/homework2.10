@@ -1,31 +1,32 @@
 package com.example.demo;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Configuration
 public class StoreService {
 
-    ArrayList items = new ArrayList<>();
-
-    public  addProduct(ProductId id) {
-if (ProductId.isEmpty())
-    return false;
-if (ProductId.containts(id))
-    return Id;
+    public StoreService(Store store) {
+        this.store = store;
     }
 
-    public getProduct(ProductId id) {
-        ProductId.containts(id);
+    private final Store store;
 
-        return ProductId;
+    public void add(Integer[] ids) {
+        store.add(ids);
+    }
+
+    public List<Integer[]> all() {
+
+        return store.getAll();
 
     }
+
+
+
 }
 
 
